@@ -1,0 +1,31 @@
+ <% for entry in @entries %>
+  <h2><%= entry.title %></h2>
+    <p><%= entry.date %></p>
+    <p><%= entry.contents %></p>
+<% end %>
+	 <h1>How to do an app</h1>
+		  <img src="waveboard.jpg" />
+		  <div>
+		    <h2>download sublime</h2>
+		      <p><b>RUN IT!</b></p>
+		      <p>Just submitted an application to a Rails Girls workshop. Can’t wait to see whether I’ll get in!</p>
+		      <h2>Wow we've made  it!</h2>
+		      <p>15.02.2014</p>
+		      <p>Received an email that my application got accepted! I’ll be at a RG workshop next week!</p>
+		    <h2>The first day starts…</h2>
+		      <p>22.02.2014</p>
+		      <p>Today is the first day of the Rails Girls workshop. My coach is quite strange but it seems we all have Rails installed now and can start learning.</p>
+		  </div>
+			  <div>
+		  <h1>My favourite websites</h1>
+			<% for url, name, cokolwiek, ikona in @websites %>
+			  <li><a href="<%= url %>">
+			  	<% if ikona.present? %>
+			  		<img src="<%= ikona %>" />
+			  	<% else %>
+			  		<%= name %>
+			  	<% end %>
+			  </a></li>
+			<% end %>
+		  </div>
+	  <img src="zdjecie.jpg" />
