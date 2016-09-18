@@ -9,7 +9,29 @@
   </head>
 
   <body>
-  	<h1> <i> My own app </i> </h1> 
-    <%= yield %>
+    <div class="naglowek">
+    	<h1> <i> My own app </i> </h1> 
+      </div>
+    <div class="reszta">
+      <div class="lewy">
+        <div class="zaokraglony">
+        <%= yield %>
+        </div>
+        <div class="zaokraglony">
+                <% for url, name, ikona in websites %>
+                <li><a href="<%= url %>">
+                  <% if ikona.present? %>
+                    <img src="<%= ikona %>" />
+                  <% else %>
+                    <%= name %>
+                  <% end %>
+                </a></li>
+              <% end %>
+        </div>
+      </div>
+      <div class="prawy">
+       <img src= "http://images.clipartpanda.com/pink-heart-outline-clipart-aTexGLAT4.png" />
+      </div>
+      </div>
   </body>
 </html>
